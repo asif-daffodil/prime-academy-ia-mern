@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.effect1, .effect2, .effect3, .effect4 {
+    width: 150px;
+    height: 150px;
+    background-color: limegreen;
+    transition: all 0.5s;
+    margin: 20px;
+}
+
+.effect1:hover {
+    transform: translate(20px, 20px);
+    /* transform: perspective(500px) translateZ(-100px); */
+    background-color: cornflowerblue;
+}
+
+.effect2:hover {
+    background-color: fuchsia;
+    transform:scale(0.8);
+}
+
+.effect3:hover {
+    background-color: orange;
+    /* transform: perspective(500px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); */
+    transform: rotateZ(360deg);
+}
+
+.effect4:hover {
+    background-color: hotpink;
+    transform: skew(15deg, 15deg);
+}

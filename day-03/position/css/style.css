@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main, .pain {
+    width: 150px;
+    height: 150px;
+    background: lime;
+    position: relative;
+    margin: 50px;
+}
+
+
+
+.pain {
+    width: 200px;
+    height: 200px;
+    background: dodgerblue;
+
+    /* 3D shadow */
+    box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.5);
+
+    animation: sakib 3s infinite linear;
+    transform-origin: center;
+}
+
+@keyframes sakib {
+    0% {
+        background: limegreen;
+        transform: perspective(500px) rotateX(-45deg);
+        box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        background: magenta;
+        transform: perspective(500px) rotateX(45deg);
+        box-shadow: 10px 30px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        background: limegreen;
+        transform: perspective(500px) rotateX(-45deg);
+        box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.rain {
+    width: 75px;
+    height: 75px;
+    background: darkcyan;
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+}
+
+.main:hover {
+    top: 20px;
+    left: 20px;
+}
+
+.train {
+    width: 30px;
+    height: 30px;
+    background: darkblue;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+body {
+    min-height: 300vh;
+}
+
+.kane {
+    width: 40px;
+    height: 400px;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    background: #000;
+    padding: 5px;
+}
+
+.hari {
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    position: sticky;
+    top: 50px;
+}
