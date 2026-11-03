@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif ;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="container w-full max-w-[1400px] mx-auto pt-[46px] px-4 md:px-8">
+        <!-- Header section start -->
+        <section class="w-full flex  flex-col md:flex-row md:items-center">
+            <div class="flex justify-between md:justify-start items-center ">
+                <figure class="">
+                    <img src="./image/logo.png" alt="">
+                </figure>
+            
+                <label for="barbtn" class="block w-8 h-8 md:hidden cursor-pointer text-black">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 448 512"
+                  class="w-full h-full fill-current">
+                  <path d="M0 96C0 78.3 14.3 64 32 64h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32z"/>
+                </svg>
+            </label>
+            </div>
+            <nav class="md:ml-auto md:mr-[54px]">
+                 <input type="checkbox" id="barbtn" class="peer hidden">
+                <ul class="gap-4 md:gap-6 lg:gap-[65px] text-base lg:text-[22px] font-medium text-[#242323] hidden peer-checked:flex md:flex flex-col md:flex-row">
+                    <li>
+                        <a href="">CATALOGUE</a>
+                    </li>
+                    <li>
+                        <a href="">FASHION</a>
+                    </li>
+                    <li>
+                        <a href="">FAVOURITE</a>
+                    </li>
+                    <li>
+                        <a href="">LIFESTYLE</a>
+                    </li>
+                    <li class="md:hidden">
+                        <a href="">SIGN UP</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <button class="w-[134px] h-[62px] bg-black text-[#FEFEFE] rounded-[7px] font-medium text-2xl hidden md:block">SIGN UP</button>
+        </section>
+        <!-- Header section End -->
+        
+
+        <!-- Hero section Start -->
+          <section class="w-full bg-[#F4F6F5] rounded-[59px] pt-[68px] md:px-[82px] flex gap-[43px] mt-14 flex-col md:flex-row items-center md:items-start ">
+            <figure class="flex-shrink-1">
+                <img src="./image/image 13.png" alt="">
+                <p class="text-[32px] ml-5 my-10">Live for Influential and Innovative fashion!</p>
+                  <button class="w-[134px] h-[62px] bg-black text-[#FEFEFE] rounded-[7px] font-medium text-2xl hidden md:block ml-5">Shop Now</button>
+            </figure>
+            <figure class="flex-grow-1">
+                <img src="./image/banner.png" alt="" class="md:max-w-[891px]">
+            </figure>
+           
+          </section>
+         <!-- Hero section End -->
+    </div>
+    
+        <!-- Brand Section Start -->
+        <section class="mt-16 mx-4 md:mx-8 bg-[#EBD96B] py-8 px-4 rounded-xl">
+            <div class="max-w-[1200px] mx-auto flex flex-wrap justify-around items-center gap-8">
+                <img src="./image/brand-1.png" alt="H&M" class="w-20 md:w-28 object-contain  mix-blend-multiply">
+                <img src="./image/brand-2.png" alt="OBEY" class="w-20 md:w-28 object-contain  mix-blend-multiply">
+                <img src="./image/brand-3.png" alt="Shopify" class="w-20 md:w-28 object-contain  mix-blend-multiply">
+                <img src="./image/brand-4.png" alt="Lacoste" class="w-20 md:w-28 object-contain mix-blend-multiply">
+                <img src="./image/brand-5.png" alt="Levis" class="w-20 md:w-28 object-contain  mix-blend-multiply">
+                <img src="./image/brand-6.png" alt="Amazon" class="w-20 md:w-28 object-contain  mix-blend-multiply">
+            </div>
+        </section>
+        <!-- Brand Section End -->
+
+
+        <!-- New Arrivals Section Start -->
+        <section class="mt-24 px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10">
+                NEW ARRIVALS
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div>
+                    <img src="./image/Pic_1.png" alt="Hoodies and Sweatshirt"
+                        class="w-full rounded-2xl object-cover">
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <h3 class="text-xl font-medium">Hoodies & Sweatshirt</h3>
+                            <p class="text-gray-500 mt-1">Explore Now!</p>
+                        </div>
+                        <a href="#" class="text-2xl text-gray-500" aria-label="Explore hoodies">→</a>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./image/Pic_2.png" alt="Coats and Parkas"
+                        class="w-full rounded-2xl object-cover">
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <h3 class="text-xl font-medium">Coats & Parkas</h3>
+                            <p class="text-gray-500 mt-1">Explore Now!</p>
+                        </div>
+                        <a href="#" class="text-2xl text-gray-500" aria-label="Explore coats">→</a>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./image/Pic_3.png" alt="Tees and T-Shirt"
+                        class="w-full rounded-2xl object-cover">
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <h3 class="text-xl font-medium">Tees & T-Shirt</h3>
+                            <p class="text-gray-500 mt-1">Explore Now!</p>
+                        </div>
+                        <a href="#" class="text-2xl text-gray-500" aria-label="Explore T-shirts">→</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- New Arrivals Section End -->
+
+
+        <!-- Payday Sale Section Start -->
+        <section class="mt-24 bg-[#E6C744] flex flex-col md:flex-row items-center overflow-hidden">
+
+            <div class="w-full md:w-1/2">
+                <img src="./image/banner-2.png" alt="Payday fashion collection"
+                    class="w-full h-full object-cover ">
+            </div>
+
+            <div class="w-full md:w-1/2 px-8 py-12 md:px-12">
+                <h2 class="text-5xl md:text-7xl font-black leading-tight">
+                    PAYDAY SALE NOW
+                </h2>
+
+                <p class="text-xl md:text-2xl mt-6">
+                    Spend minimal $100 get 30% off voucher code for your next purchase.
+                </p>
+
+                <p class="font-bold text-xl mt-6">1 June - 10 June 2026</p>
+                <p class="mt-2">*Terms & Conditions apply</p>
+
+                <a href="#arrivals"
+                    class="inline-block bg-black text-white px-8 py-4 rounded-lg mt-7 text-xl font-medium">
+                    SHOP NOW
+                </a>
+            </div>
+
+        </section>
+        <!-- Payday Sale Section End -->
+
+
+        <!-- Young's Favourite Section Start -->
+        <section class="mt-24 px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10">
+                Young's Favourite
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div>
+                    <img src="./image/Pic_4.png" alt="Trending fashion"
+                        class="w-full rounded-2xl object-cover">
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-medium">Trending on Instagram</h3>
+                            <p class="text-gray-500 mt-2">Explore Now!</p>
+                        </div>
+                        <a href="#" class="text-2xl text-gray-500" aria-label="Explore trending fashion">→</a>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./image/Pic_5.png" alt="All under $40 fashion"
+                        class="w-full rounded-2xl object-cover">
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-medium">All Under $40</h3>
+                            <p class="text-gray-500 mt-2">Explore Now!</p>
+                        </div>
+                        <a href="#" class="text-2xl text-gray-500" aria-label="Explore affordable fashion">→</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Young's Favourite Section End -->
+
+
+        <!-- App Download Section Start -->
+        <section class="mt-24 px-4 md:px-8 max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-center gap-1">
+
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+                    DOWNLOAD APP & GET THE VOUCHER!
+                </h2>
+
+                <p class="text-gray-500 text-lg mt-6">
+                    Get 30% off for your first transaction using our new mobile app.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="#" class="bg-black text-white rounded-lg px-5 py-3">
+                        <span class="block text-xs">Download on the</span>
+                        <span class="text-lg font-semibold">App Store</span>
+                    </a>
+
+                    <a href="#" class="bg-black text-white rounded-lg px-5 py-3">
+                        <span class="block text-xs">GET IT ON</span>
+                        <span class="text-lg font-semibold">Google Play</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center items-center">
+            <img src="./image/mobile-app.png"
+            alt="Fashion shopping mobile app"
+            class="w-full max-w-[400px] h-auto object-contain">
+            </div>
+
+        </section>
+        <!-- App Download Section End -->
+
+
+        <!-- Newsletter Section Start -->
+        <section class="mt-24 bg-[#E5C643] px-5 py-16 md:py-24 text-center">
+
+            <h2 class="text-3xl md:text-5xl font-bold text-white max-w-[850px] mx-auto leading-tight">
+                JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO
+            </h2>
+
+            <p class="text-white text-base md:text-xl mt-6">
+                Type your email down below and be a part of our daily news
+            </p>
+
+            <form class="mt-8 mx-auto max-w-[550px] bg-white rounded-lg p-2 flex gap-2">
+                <input type="email" placeholder="Add your email here"
+                    class="min-w-0 flex-1 px-3 py-3 outline-none"
+                    required>
+
+                <button type="submit"
+                    class="bg-black text-white px-5 md:px-8 py-3 rounded-lg font-medium">
+                    SEND
+                </button>
+            </form>
+
+        </section>
+        <!-- Newsletter Section End -->
+
+
+        <!-- Footer Section Start -->
+        <footer class="bg-black text-white mt-0 px-6 py-14 md:px-12">
+
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+
+                <div class="max-w-[350px]">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-wide">FASHION</h2>
+
+                    <p class="text-gray-400 mt-5 leading-7">
+                        Complete your style with awesome clothes from us.
+                    </p>
+
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" aria-label="Facebook"
+                            class="bg-[#E6C744] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">f</a>
+
+                        <a href="#" aria-label="Instagram"
+                            class="bg-[#E6C744] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">ig</a>
+
+                        <a href="#" aria-label="Twitter"
+                            class="bg-[#E6C744] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">X</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-12">
+
+                    <div>
+                        <h3 class="font-semibold mb-5">Company</h3>
+                        <ul class="text-gray-400 space-y-3">
+                            <li><a href="#" class="hover:text-white">About</a></li>
+                            <li><a href="#" class="hover:text-white">Contact us</a></li>
+                            <li><a href="#" class="hover:text-white">Support</a></li>
+                            <li><a href="#" class="hover:text-white">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold mb-5">Quick Link</h3>
+                        <ul class="text-gray-400 space-y-3">
+                            <li><a href="#" class="hover:text-white">Share Location</a></li>
+                            <li><a href="#" class="hover:text-white">Orders Tracking</a></li>
+                            <li><a href="#" class="hover:text-white">Size Guide</a></li>
+                            <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold mb-5">Legal</h3>
+                        <ul class="text-gray-400 space-y-3">
+                            <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="text-gray-500 text-center mt-12 text-sm">
+                &copy; 2026 FASHION. All Rights Reserved.
+            </p>
+
+        </footer>
+        <!-- Footer Section End -->
+
+
+</body>
+
+</html>
