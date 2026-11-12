@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.abul {
+  color: red;
+  letter-spacing: 2px;
+}
+
+.babul {
+  color: green;
+  letter-spacing: 3px;
+}
+
+.btn {
+  border-width: 0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+.btn:hover {
+  background-color: darkblue;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
