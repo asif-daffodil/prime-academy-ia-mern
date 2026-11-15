@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="container mx-auto min-h-screen flex justify-center items-center">
+        <form action="" class="border p-4 rounded shadow-lg shadow-violet-600 flex flex-col gap-4 items-start" id="regForm">
+            <h2 class="text-2xl">Registration Form</h2>
+            <div class="flex flex-col">
+                <input type="text" placeholder="your name" class="border rounded p-1 w-80" name="stdName">
+                <span class="text-red-500 text-sm w-80" id="errName"></span>
+            </div>
+            <div class="flex flex-col">
+                <input type="email" placeholder="your Email" class="border rounded p-1 w-80" name="stdEmail">
+                <span class="text-red-500 text-sm w-80" id="errEmail"></span>
+            </div>
+            <div class="flex flex-col">
+                <div>
+                <label for="">Gender :</label></div>
+                <label for="male">
+                    <input type="radio" value="Male" id="male" name="gender"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" value="Female" id="female" name="gender"> Female
+                </label>
+            </div>
+            <span class="text-red-500 text-sm w-80" id="errGender"></span>
+            <div class="flex flex-col"> 
+                <input type="password" placeholder="your password" class="border rounded p-1 w-80" name="stdPass" id="stdPassId">
+                <span class="text-red-500 text-sm w-80" id="stdPass"></span>
+            </div>
+                <div>
+                    <label for="spass">
+                    <input type="checkbox" id="spass"> Show Password
+                     </label>
+            </div>
+
+            <button type="submit"
+             class="border rounded-full px-3 cursor-pointer hover:bg-violet-500 hover:text-white">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        const regForm = document.getElementById("regForm")
+        const errName = document.getElementById("errName")
+        const errEmail = document.getElementById("errEmail")
+        const errGender = document.getElementById("errGender")
+        const errPass = document.getElementById("errPass")
+        const spass = document.getElementById("spass")
+        const stdPassId = document.getElementById("stdPassId")
+
+
+        regForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            
+            const formData = new FormData(regForm)
+            const stdName = formData.get('stdName')
+            const stdEmail = formData.get('stdEmail')
+            const Gender = formData.get('gender')
+            const stdPass = formData.get('stdPass')
+            
+
+            if(!stdName.trim()) {
+                errName.textContent = "Please, provide the student name"
+            }else {
+                errName.textContent = ""
+            }
+
+            
+            if(!stdEmail.trim()) {
+                errEmail.textContent = "Please, provide the student email."
+            }else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(stdEmail)) {
+                errEmail.textContent = "Invalid email address."
+            }else {
+                errEmail.textContent = ""
+            }
+
+           if (!Gender?.trim()) {
+            errGender.textContent = "please, select your gender."
+           }else {
+            errGender.textContent = ""
+           }
+
+           if (!stdPass.trim()) {
+            errPass.textContent = "please, provide your password."
+           }else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/.test(stdPass)) {
+            errPass.textContent = "password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."
+           }else {
+            errPass.textContent = ""
+           }
+        })
+
+        spass.addEventListener("change", () => {
+            if (spass.checked){
+                stdPassId.type = "text"
+            }else {
+                stdPassId.type = "password"
+            }
+        })
+
+    </script>
+  </body>
+</html>
