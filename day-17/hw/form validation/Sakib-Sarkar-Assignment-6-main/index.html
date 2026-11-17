@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="container mx-auto min-h-screen flex justify-center items-center">
+        <form action="" class="border p-4 rounded shadow-lg shadow-violet-600 flex flex-col gap-4 items-start " id="regForm">
+            <h2 class="text-2xl">Registration Form</h2>
+            <div class="flex flex-col">
+                
+                <input type="text" placeholder="Your name" class="border rounded p-1 w-80" name="stdName">
+                <span class="text-red-500 text-sm" id="errorName"></span>
+            </div>
+            <div class="flex flex-col">
+                
+                <input type="text" placeholder="Your email" class="border rounded p-1 w-80" name="stdemail">
+                <span class="text-red-500 text-sm" id="erroremail"></span>
+            </div>
+            <div class="flex flex-col">
+                <div class="">
+
+                    <label for="">Gender :</label>
+                    <label for="male">
+                        <input type="radio" value="male" id="male" name="gender">Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" value="female" id="female" name="gender">Female
+                    </label>
+                    <span class="text-red-500 text-sm w-80" id="errorgender"></span>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                 <input type="password" placeholder="Your password" class="border rounded p-1 w-80" name="stdpassword" id="stdpassid">
+                <span class="text-red-500 text-sm w-80" id="errorpassword"></span>
+            </div>
+            <div class="">
+                <label for="spassword">
+
+                    <input type="checkbox" id="spassword">Show password
+                </label>
+            </div>
+            <button type="submit" class="border rounded-full px-3 cursor-pointer hover:bg-violet-500 hover:text-white">Submit</button>
+        </form>
+    
+    </div>
+    <script>
+        const regForm= document.getElementById("regForm")
+        const errorName= document.getElementById("errorName")
+        const erroremail = document.getElementById("erroremail")
+        const errorgender = document.getElementById("errorgender")
+        const errorpassword = document.getElementById("errorpassword")
+        const spassword = document.getElementById("spassword")
+        const stdpassid = document.getElementById("stdpassid")
+
+        
+
+        regForm.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const formData = new FormData(regForm)
+            const stdName = formData.get("stdName")
+            const stdemail =formData.get("stdemail")
+            const gender =formData.get("gender")
+            const stdpassword = formData.get("stdpassword")
+            const spassword = formData.get("spassword")
+            
+            if(!stdName.trim()) {
+                errorName.textContent="Please, provide the student name."
+            }else{
+                errorName.textContent=""
+            }
+
+            if(!stdemail.trim()){
+                erroremail.textContent= "Please, write your email address."
+            } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(stdemail)){
+
+                erroremail.textContent= "invalid email address."
+            } else{
+                erroremail.textContent=""
+            }
+
+            if (!gender?.trim()){
+                errorgender.textContent="Please, select your gender"
+            } else{
+                errorgender.textContent=""
+
+            }
+
+            if (!stdpassword.trim()){
+                errorpassword.textContent="Please, Enter your password"
+               
+            } else if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(stdpassword)){
+                errorpassword.textContent="Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&)."
+                    
+            }else{
+                errorpassword.textContent=""
+            }
+
+        })
+        spassword.addEventListener("change",(e)=>{
+            if (e.target.checked){
+                stdpassid.type="text"
+            } else{
+                stdpassid.type="password"
+            }
+
+        })
+    </script>
+  </body>
+</html>
